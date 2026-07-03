@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forever Together ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:850px;
+    text-align:center;
+}
+
+h1{
+    color:#fff;
+    font-size:40px;
+    margin-bottom:10px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.4);
+}
+
+p{
+    color:white;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.slider{
+    position:relative;
+    width:100%;
+    height:500px;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 1.5s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.caption{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    background:rgba(0,0,0,.35);
+    color:white;
+    padding:12px;
+    font-size:24px;
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:25px;
+    animation:float 8s linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+.footer{
+    margin-top:20px;
+    color:white;
+    font-size:22px;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+@media(max-width:768px){
+
+.slider{
+height:350px;
+}
+
+h1{
+font-size:30px;
+}
+
+.caption{
+font-size:18px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="heart" style="left:10%;animation-delay:0s;">❤️</div>
+<div class="heart" style="left:30%;animation-delay:2s;">💕</div>
+<div class="heart" style="left:55%;animation-delay:4s;">💖</div>
+<div class="heart" style="left:80%;animation-delay:1s;">❤️</div>
+<div class="heart" style="left:65%;animation-delay:5s;">💗</div>
+
+<div class="container">
+
+<h1>💍 Husband ❤️ Wife 💍</h1>
+<p>Forever Together • Happy Married Life</p>
+
+<div class="slider">
+
+<div class="slide active">
+<img src="photo1.jpg" alt="">
+<div class="caption">Our Wedding Day ❤️</div>
+</div>
+
+<div class="slide">
+<img src="photo2.jpg" alt="">
+<div class="caption">Beautiful Moments 💕</div>
+</div>
+
+<div class="slide">
+<img src="photo3.jpg" alt="">
+<div class="caption">Made For Each Other 💖</div>
+</div>
+
+<div class="slide">
+<img src="photo4.jpg" alt="">
+<div class="caption">Forever & Always ❤️</div>
+</div>
+
+</div>
+
+<div class="footer">
+❤️ Together Forever ❤️
+</div>
+
+</div>
+
+<script>
+
+const slides=document.querySelectorAll(".slide");
+let index=0;
+
+function showSlide(){
+
+slides[index].classList.remove("active");
+
+index=(index+1)%slides.length;
+
+slides[index].classList.add("active");
+
+}
+
+setInterval(showSlide,3000);
+
+</script>
+
+</body>
+</html>
